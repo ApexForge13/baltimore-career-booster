@@ -44,8 +44,8 @@ if not st.session_state.paid:
                 "quantity": 1,
             }],
             mode="payment",
-            success_url=f"https://YOUR-APP-NAME.streamlit.app/?session_id={{CHECKOUT_SESSION_ID}}",
-            cancel_url=f"https://YOUR-APP-NAME.streamlit.app/",
+            success_url=f"https://baltimore-career-booster-5yqmdnvotfjrjeg9xcm56l.streamlit.app/?session_id={{CHECKOUT_SESSION_ID}}",
+            cancel_url=f"https://baltimore-career-booster-5yqmdnvotfjrjeg9xcm56l.streamlit.app/",
         )
         st.link_button("Complete payment on Stripe", checkout_session.url)
 
