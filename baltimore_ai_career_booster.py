@@ -49,6 +49,12 @@ if not st.session_state.paid:
         )
         st.link_button("Complete payment on Stripe", checkout_session.url)
 
+    with st.expander("🔐 Admin Access"):
+        admin_input = st.text_input("Admin password", type="password")
+        if admin_input == st.secrets["admin"]["password"]:
+            st.session_state.paid = True
+            st.rerun()
+
     st.stop()  # Stops here until paid
 
 # ====================== FULL APP (paid users only) ======================
